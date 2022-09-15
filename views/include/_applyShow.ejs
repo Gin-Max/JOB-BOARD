@@ -1,0 +1,22 @@
+<% for(var i = 0; i < apply.length; i++) {%>
+    <tr>
+        <td><%= i + 1 %></td>
+        <td><%= apply[i].firstName %></td>
+        <td><%= apply[i].lastName %></td>
+        <td><%= apply[i].location %></td>
+        <td><%= apply[i].email %></td>
+        <td><%= apply[i].phone %></td>
+        <td><%= apply[i].studies %></td>
+    
+        <td>
+            <a href="/update-apply?id=<%= apply[i]._id%>" class="btn border-shadow update">
+                <span><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            </td>
+            <td>
+            <a class="btn border-shadow deleteApply" data-id=<%= apply[i]._id%> >
+                <span><i class="fas fa-times"></i></span>
+            </a>
+        </td>   
+    </tr>
+    <% } %>

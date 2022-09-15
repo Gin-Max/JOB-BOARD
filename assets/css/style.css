@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap');
+
+:root{
+    --dark: #2b2d42;
+    --light: #adb5bd;
+    --border: #dee2e6;
+    --border-btn: #edf2f4;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.container{
+    max-width: 1024px;
+    margin: auto;
+}
+
+.nav-brand, .login, .add-advertisement{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.border-shadow{
+    /* border: 1px solid var(--border-btn);
+    box-shadow: 1px 3px 10px #e9ecef; */
+}
+
+.text-dark{
+    color: var(--dark);
+}
+
+.inline{
+    display: inline-block;
+}
+
+.text-light{
+    color: var(--light);
+}
+
+.text-gradient{
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#header nav{
+    background-color: #06d6a0;
+    padding: 1em 0;
+    width: 100%;
+}
+
+#site-main{
+    margin-top: 6em;
+    font-family: 'Barlow', sans-serif;
+}
+
+#site-main .container .box-nav > a{
+    font-size: 1em;
+    padding: .5em 1em;
+}
+
+#site-main .container form{
+    margin: 2em 0;
+}
+
+table{
+    border-spacing: 0px;
+    width: 100%;
+}
+
+.table td, .table th{
+    padding: .75em;
+    /* vertical-align: top; */
+    text-align: center;
+    /* border-top: 1px solid var(--border); */
+}
+
+.table td > a.btn{
+    padding: .3em 1em;
+    font-size: 1.1em;
+    margin: 0 .2em;
+}
+
+.table tr:hover{
+    background-color:#06d6a0 ;
+}
+
+.table tr:hover td > a{
+    box-shadow: none;
+}
+
+.table .thead-dark th{
+    color: #fff;
+    background-color: var(--dark) ;
+    border-color: #32383e;
+}
+
+@media only screen and (max-width: 1024px){
+    table, thead, tbody, th, td, tr{
+        display: block;
+    }
+
+    thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr { border: 1px solid var(--border);}
+
+    td{
+        border: none;
+        position: relative;
+    }
+
+}
+
+/*  add user & update user template */
+.form-title{
+    margin-top: 2em;
+}
+
+.form-title > h2{
+    padding: .5em 0;
+}
+
+.new_user{
+    max-width: 786px;
+    margin: auto;
+}
+
+.classForm .form-group{
+    margin: .4em 0;
+}
+
+.form-group input[type="text"], 
+.form-group input[type="number"],
+.form-group input[type="email"], 
+.form-group input[type="password"],
+.form-group textarea{
+    width: 100%;
+    padding: .6em 1em;
+    margin: .5em 0;
+    border: 1px solid var(--border);
+    font-family: 'Barlow', sans-serif;
+    font-size: 1em;
+    border-radius: .2em;
+}
+
+.classForm .form-group .radio{
+    margin: 1em 2em;
+}
+
+/* adding style to radio buttons */
+.radio input[type='radio']{
+    position: absolute;
+    opacity: 0;
+}
+
+.radio input[type='radio'] + .radio-label:before{
+    content: "";
+    background: var(--border-btn);
+    border-radius: 100%;
+    border: 1px solid var(--border);
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: -0em;
+    margin-right: .5em;
+    vertical-align: top;
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+
+.radio input[type='radio']:checked + .radio-label:before{
+    background-color: #16db93;
+    box-shadow: inset 0 0 0 4px #e9ecef;
+}
+
+.radio input[type='radio']:focus + .radio-label:before{
+    outline: none;
+    border-color:#16db93;
+}
+
+.radio input[type='radio']:disabled + .radio-label:before{
+    box-shadow: inset 0 0 0 4px #e9ecef;
+    border-color: #b4b4b4;
+    background: #b4b4b4;
+}
+
+.classForm .form-group .btn{
+    width: 100%;
+    padding: .9em 1em;
+    background-color:#16db93; 
+    border: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: .2em;
+    margin: .5em 0;
+}
+
+#update_user .form-group .btn:hover,
+#add_user .form-group .btn:hover,
+#add_adv .form-group .btn:hover{
+    background-color: var(--dark);
+    color: var(--border);
+}
+
+.annonces {
+    background-color: white;
+    /* border-radius: 0.5rem; */
+    padding: 1rem;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    margin:20px;
+  }
+
+  /* .index {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin:20px;
+  } */
+
+
+
+
+
+
+/******************* CSS AJOUTE *******************/
+:root {
+    --box-shadow : 0 0 4px var(--black);
+    --black : #3e3e3e;
+    --white : #f2f4f3;
+    --beige : #A9927D;
+    --brown : #5E503F;
+    --red : #49111C;
+    --border-left : #222222;
+}
+
+body {
+    background-color: #ccc;
+}
+
+
+/***************
+    HEADER
+***************/
+
+#header {
+    height : 70px;
+    border : 2px solid var(--black);
+    border-top : none;
+    line-height : 70px;
+}
+
+#header nav {
+    background-color : #2c2d30;
+    height : 100%;
+    padding : 0;
+}
+
+#header a {
+    margin : 0 15px;
+    color : var(--white);
+    text-transform: uppercase;
+    font-size : 1.2rem;
+    font-weight: 400;
+}
+
+#header a:hover {
+    color: var(--beige);
+    text-decoration: underline;
+}
+
+/***************
+    CONTENU
+***************/
+
+/* Le 2ème container, c'est à dire le contenu de la page et pas le header */
+.container:nth-of-type(2) {
+    background-color : #646B6C;
+    min-height : calc(100vh - 70px);
+    box-shadow : 0 0 4pxvar(--black);
+    border : 2px solid var(--black);
+    border-top : none;
+}
+
+.container h2 {
+    padding-top : 30px;
+    text-transform: uppercase;
+    font-size : 2.5rem;
+    text-align: center;
+    color : var(--red);
+    text-shadow: 1px 1px 0px var(--black);
+}
+
+.container .annonces {
+    background-color: var(--brown);
+    /* width : 100%; */
+    height : 100%;   
+    width : 45%;
+    vertical-align: top;
+    display: inline-block;
+}
+
+/* Container impair */
+.container .annonces:nth-of-type(odd) {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; 
+    border-left : 5px solid var(--border-left);
+}
+
+/* Container pair */
+.container .annonces:nth-of-type(even) {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    border-right : 5px solid var(--border-left);
+}
+
+.container .annonces p {
+    color : #ccc;
+    margin : 5px 0;
+    font-size : 1.2rem;
+}
+
+.container .annonces button {
+    padding : 10px 15px;
+    border-radius: 10px;
+    border : none;
+    margin : 5px 0;
+    outline : none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color : var(--border-left)!important;
+    color : var(--white);
+}
+
+.container .annonces .apply {
+    /* float : right; */
+}
+
+.container  a {
+    color : var(--white);
+    font-size : 1.2rem;
+}
+
+.index {
+    /* display : flex; */
+    display : inline-block;
+    width : 100%;
+}
+
+/***************
+    FORM
+***************/
+
+.littleForm {
+    width : 50%!important;
+    margin : 50px auto;
+}
+
+form label {
+    font-size : 1.2rem;
+    text-transform: capitalize;
+}
+
+form input, form textarea {
+    margin : 2px 0 15px!important;
+    outline : none;
+}
+
+form input:focus, form textarea:focus {
+    background-color: var(--beige);
+    color : var(--white);
+    border : 1px solid var(--brown)!important;
+}
+
+form input:focus::placeholder, form textarea:focus::placeholder {
+    color : var(--white);
+}
+
+form button {
+    padding : 12px 18px;
+    border-radius: 10px;
+    border : none;
+    margin : 5px 0;
+    outline : none;
+    cursor: pointer;
+    float : right;
+    background-color: var(--white)!important;
+}
+
+/***************
+    TABLE
+***************/
+
+.table {
+    margin-top : 50px!important;
+    width : 80%;
+    margin : auto;
+    border : none!important;
+    border-left : 5px solid var(--border-left)!important;
+    box-shadow: 0 0 5px 0 rgb(0 0 0 / 50%);
+}
+
+.table thead {
+    background-color: var(--red)!important;
+    color : var(--white);
+}
+
+.table thead tr:hover {
+    background-color: var(--red)!important;
+}
+
+.table thead, .table tr, .table td {
+    border : none!important;
+    text-justify: justify!important;
+}
+
+.table tbody tr:nth-of-type(odd) {
+    background-color: var(--white);
+}
+
+.table tbody tr:nth-of-type(even) {
+    background-color: #ccc;
+}
+
+.table tbody tr:hover {
+    background-color: var(--border-left);
+    color : var(--white)
+}
+
+.table tbody tr:hover a {
+    border : 1px solid var(--white)!important;
+}
+
+.table tbody tr i {
+    color : var(--brown);
+}
+
+.table tbody tr:hover i {
+    color : var(--white);
+}
+
+.table a {
+    border : 1px solid var(--border-left)!important;
+    box-shadow : none;
+    cursor: pointer;
+}

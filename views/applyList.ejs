@@ -1,0 +1,46 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+
+    <!-- Main Site -->
+    <!-- <main id="site-main"> -->
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-advertisement" class="border-shadow">
+                    <span>Add job <i class="fas fa-user"></i></span>
+                    <div class="filter">
+                        <a href="/"><i class="fas fa-angle-double-left"></i> Menu principal</a>
+                    </div>
+                </a>
+            </div>
+            <!-- form handling -->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Location</th>
+                            <th>Email</th>
+                            <th>Phone Number
+                            </th>
+                            <th>Ecole</th>
+                            <th colspan="2">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('include/_applyShow') %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    <!-- </main> -->
+<!-- /Main Site -->
+
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

@@ -1,0 +1,56 @@
+
+<!-- include header -->
+<%- include('include/_headerCompanieList') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/companieList"><i class="fas fa-angle-double-left"></i> All companies</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update Company</h2>
+            <span class="text-light">Use the below form to Update a company</span>
+        </div>
+
+        <!-- add user form -->
+         <!-- form handling -->
+ <form method="POST" id="update_companie" class="classForm">
+    <div class="new_user">
+        <input type="hidden" name="id" value="<%= companie._id %>">
+        <div class="form-group">
+            <label for="companieName" class="text-light">Company Name</label>
+            <input type="text" name="companieName" value="<%= companie.companieName %>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="location" class="text-light">Location</label>
+            <input type="hidden" name="" value="">
+            <input type="text" name="location" value="<%= companie.location %>" placeholder="">
+        </div> 
+        <div class="form-group">
+            <label for="siret" class="text-light">Siret</label>
+            <input type="hidden" name="" value="">
+            <input type="text" name="siret" value="<%= companie.siret %>" placeholder="">
+        </div>     
+        <div class="form-group">
+            <label for="email" class="text-light">Email</label>
+            <input type="hidden" name="" value="">
+            <input type="email" name="email" value="<%= companie.email %>" placeholder="">
+        </div>            
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>
+       
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

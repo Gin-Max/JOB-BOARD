@@ -1,0 +1,33 @@
+<% for(var i=0; i < advertisements.length; i++) {%>
+    <tr>
+        <td>
+            <%= i + 1 %>
+        </td>
+        <td>
+            <%= advertisements[i].jobName %>
+        </td>
+        <td>
+            <%= advertisements[i].location %>
+        </td>
+        <td>
+            <%= advertisements[i].salary %>€
+        </td>
+        <td>
+            <%= advertisements[i].description %>
+        </td>
+        <td>
+            <%= advertisements[i].detailed_description %>
+        </td>
+
+        <td class="p-0">
+            <a href="/update-adv?id=<%= advertisements[i]._id%>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+        </td>
+        <td class="p-0">
+            <a class="btn border-shadow deleteAdvertisement" data-id=<%=advertisements[i]._id%> >
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% } %>

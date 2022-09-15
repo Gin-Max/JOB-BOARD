@@ -1,0 +1,33 @@
+<% for(var i=0; i < companies.length; i++) {%>
+    <tr>
+        <td>
+            <%= i + 1 %>
+        </td>
+        <td>
+            <%= companies[i].companieName %>
+        </td>
+        <td>
+            <%= companies[i].location %>
+        </td>
+        <td>
+            <%= companies[i].siret %>
+        </td>
+        <td>
+            <%= companies[i].email %>
+        </td>
+        <td>
+            
+        </td>
+
+        <td class="p-0">
+            <a href="/update-companie?id=<%= companies[i]._id%>" class="btn border-shadow update">
+                <span><i class="fas fa-pencil-alt"></i></span>
+            </a>
+        </td>
+        <td class="p-0">
+            <a class="btn border-shadow deleteCompanies" data-id=<%=companies[i]._id%> >
+                <span><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% } %>

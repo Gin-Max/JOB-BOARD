@@ -1,0 +1,32 @@
+ <!-- form handling -->
+ <form action="/api/advertisements" method="POST" class="classForm littleForm">
+    <div class="new_adv">
+        <div class="form-group">
+            <label for="jobName" class="text-light">Job Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="jobName" value="" placeholder="Développeur ...">
+        </div>
+        <div class="form-group">
+            <label for="location" class="text-light">Location</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="location" value="" placeholder="Location">
+        </div>
+        <div class="form-group">
+            <label for="salary" class="text-light">Salary</label>
+            <input type="number" name="salary" value="" placeholder="Salary">
+        </div>
+        <div class="form-group">
+            <label for="description" class="text-light">Description</label>
+            <input type="text" name="description" value="" placeholder="What is it about ?">
+        </div>
+        <div class="form-group">
+            <label for="detailed_description" class="text-light">Detailed Description</label>
+            <textarea name="detailed_description" value="" placeholder="More about it"></textarea>
+        </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>

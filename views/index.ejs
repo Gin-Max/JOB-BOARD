@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>IndeedDuPauvre</title>
+  <link rel="stylesheet" href="http://localhost:3000/css/style.css">
+  <script src="/js/index.js"></script>
+</head>
+
+<body>
+
+  <!-- include header -->
+  <%- include('include/_header') %>
+    <!-- /include header -->
+    <div class="container">
+      <h2>Jobs</h2>
+      <div class="index">
+
+        <% for(var i=0; i < advertisements.length; i++) {%>
+          <div class="annonces">
+            <p>
+              <%= advertisements[i].jobName %>
+            </p>
+            <p>
+              <%= advertisements[i].location %>
+            </p>
+            <p>
+              <%= advertisements[i].salary %>€
+            </p>
+            <p>
+              <%= advertisements[i].description %>
+            </p>
+            <div id="details_<%= advertisements[i]._id %>" style="display:none;">
+              <p>
+                <%= advertisements[i].detailed_description %>
+              </p>
+            </div>
+
+            <button onclick="myFunction('<%= advertisements[i]._id %>')"
+              id="detailsBtn_<%= advertisements[i]._id %>">Learn More</button>
+            <br>
+            <button data-adv-id="<%= advertisements[i]._id %>" class="apply">Apply</button>
+          </div>
+          <% } %>
+      </div>
+    </div>
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+      <!-- /include footer -->
+
+</body>
+
+</html>
