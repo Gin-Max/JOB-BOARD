@@ -2,6 +2,14 @@
 
 Projet Job Board, site pour postuler à des annonces avec BDD
 
+Création de BDD via Mongo Cloud https://cloud.mongodb.com : 
+- créer un Cluster
+- se connecter
+- créer un ficher .env dans la branche principale du projet
+à l'intérieur 
+    PORT="votre_port"
+    MONGO_URI="votre_cluster"
+
 Pour l'utiliser il faut avoir NodeJs sur sa machine, un éditeur de code et un terminal dans le dossier du projet pour pouvoir lancer les commandes (node si possible)
 
 dans le terminal du dossier de projet :
